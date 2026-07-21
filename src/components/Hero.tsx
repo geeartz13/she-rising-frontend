@@ -20,6 +20,9 @@ const Hero = () => {
         loading="eager"
       />
 
+      {/* Overlay to block all interaction — prevents scene from being dragged */}
+      <div className="absolute inset-0 z-10" />
+
       {/* Scroll down indicator */}
       <div className="absolute bottom-10 left-1/2 -translate-x-1/2 z-30 pointer-events-auto">
         <button
