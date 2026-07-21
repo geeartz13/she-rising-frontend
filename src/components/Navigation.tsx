@@ -26,8 +26,8 @@ const Navigation = () => {
             animate={{ opacity: 1, x: 0 }}
             className="flex items-center"
           >
-            <div className="w-12 h-12 flex items-center justify-center">
-              <img src="/icons/logo.svg" alt="Logo" className="w-full h-full object-contain" />
+            <div className="flex items-center justify-center">
+              <img src="/icons/logo.svg" alt="Logo" className="h-10 w-auto" />
             </div>
           </motion.div>
           
