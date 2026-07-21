@@ -15,13 +15,10 @@ const Hero = () => {
         frameBorder='0'
         width='100%'
         height='100%'
-        className="absolute inset-0 w-full h-full border-none pointer-events-none"
+        className="absolute inset-0 w-full h-full border-none"
         title="She Rising 3D Scene"
         loading="eager"
       />
-
-      {/* Transparent overlay to block all interaction with the 3D scene */}
-      <div className="absolute inset-0 z-10" />
 
       {/* Scroll down indicator */}
       <div className="absolute bottom-10 left-1/2 -translate-x-1/2 z-30 pointer-events-auto">
@@ -29,10 +26,10 @@ const Hero = () => {
           onClick={scrollToNext}
           className="flex flex-col items-center gap-3 cursor-pointer group bg-white/20 backdrop-blur-md px-6 py-4 rounded-full border border-white/30 shadow-lg hover:bg-white/30 transition-all duration-300"
         >
-          <span className="text-white text-sm font-semibold tracking-widest uppercase drop-shadow-lg">
+          <span className="text-[#8B4513] text-sm font-semibold tracking-widest uppercase drop-shadow-lg">
             Scroll Down
           </span>
-          <img src="/icons/arrow-down.svg" className="w-6 h-6 animate-bounce invert" alt="scroll down" />
+          <img src="/icons/arrow-down.svg" className="w-6 h-6 animate-bounce" alt="scroll down" />
         </button>
       </div>
     </section>
