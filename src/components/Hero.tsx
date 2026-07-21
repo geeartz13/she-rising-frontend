@@ -20,21 +20,23 @@ const Hero = () => {
         loading="eager"
       />
 
-      {/* Cover the "Built with Spline" watermark (bottom-right corner) */}
-      <div className="absolute bottom-0 right-0 w-48 h-12 z-10 bg-gradient-to-l from-black/90 via-black/60 to-transparent" />
+      {/* Transparent overlay to block all interaction with the 3D scene */}
+      <div className="absolute inset-0 z-10" />
 
-      {/* Scroll down indicator */}
-      <button
-        onClick={scrollToNext}
-        className="absolute bottom-8 left-1/2 -translate-x-1/2 z-20 flex flex-col items-center gap-2 cursor-pointer group"
-      >
-        <span className="text-white/70 text-xs font-medium tracking-widest uppercase group-hover:text-white transition-colors">
-          Scroll Down
-        </span>
-        <div className="w-6 h-10 border-2 border-white/40 rounded-full flex justify-center group-hover:border-white/70 transition-colors">
-          <div className="w-1.5 h-1.5 bg-white/60 rounded-full mt-2 animate-bounce" />
-        </div>
-      </button>
+      {/* Scroll down indicator - sits above the overlay */}
+      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 z-20">
+        <button
+          onClick={scrollToNext}
+          className="flex flex-col items-center gap-2 cursor-pointer group"
+        >
+          <span className="text-white/70 text-xs font-medium tracking-widest uppercase group-hover:text-white transition-colors drop-shadow-md">
+            Scroll Down
+          </span>
+          <div className="w-6 h-10 border-2 border-white/40 rounded-full flex justify-center group-hover:border-white/70 transition-colors">
+            <div className="w-1.5 h-1.5 bg-white/60 rounded-full mt-2 animate-bounce" />
+          </div>
+        </button>
+      </div>
     </section>
   );
 };
